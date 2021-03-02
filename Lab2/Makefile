@@ -37,7 +37,7 @@ run-grid:
 	./GridDist $(PROC_X) $(PROC_Y) $(SIZE) $(SIZE)  
 run:
 #	mpirun -np 4 MPI_Fempois
-	prun -v -np $(NODES_NUM) -$(CORES_NUM) -sge-script $$PRUN_ETC/prun-openmpi ./MPI_Fempois
+	prun -v -np $(NODES_NUM) -$(CORES_NUM) -sge-script $$PRUN_ETC/prun-openmpi ./MPI_Fempois $(PROC_X) $(PROC_Y) $(SIZE) $(SIZE)
 
 run-10:
 	for i in 1 2 3 4 5 6 7 8 9 10 ; \
